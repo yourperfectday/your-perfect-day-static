@@ -3,6 +3,7 @@
   <input
     type="text"
     :disabled="disabled"
+    @blur="focusGone"
     v-model="propValue" />
   <div>{{validated}}</div>
 
@@ -11,7 +12,7 @@
 
 <script>
 export default {
-  name: 'TextInput',
+  name: 'CustomInput',
   props: {
     disabled: {
       type: Boolean,
@@ -34,6 +35,9 @@ export default {
       required: false
     }
   },
+  created() {
+    this.regex = this.getValidationRegex()
+  },
   data() {
     return {
       propValue: this.value
@@ -45,11 +49,24 @@ export default {
     }
   },
   methods: {
+    focusGone() {
+      alert('lost focus!')
+    },
     satisfiesLengthRequirements() {
       return this.propValue.length >= this.minLength && this.propValue.length <= this.maxLength
     },
     satisfiesRegex() {
       return this.validationRegex ? false : true
+    },
+    getValidationRegex() {
+      switch(this.validationType) {
+        case 'email':
+          return new RegExp('')
+        case 'phone':
+          return new RegExp('')
+        default:
+          return new RegExp('')
+      }
     }
   }
 }

@@ -2,8 +2,10 @@
   <section class="container">
     <logo/>
     <navigation/>
+
     <form v-if="!successfullySubmit" id="contact-form" class="contact-form">
-      <h1 class="contact-intro">Your perfect day is just a click away. Fill out the form below and Aileen will be in touch shortly.</h1>
+      <h1 class="contact-intro">Your perfect day is just a click away.<br>Fill out the form below and Aileen will be in touch shortly.</h1>
+
       <div class="name contact-container">
         <label class="label"
                for="name">Name*</label>
@@ -11,47 +13,55 @@
                class="input"
                v-model="formData.name"
                id="name"
-               name="name"/>
+               name="name" />
       </div>
+
       <div class="email contact-container">
         <label class="label"
                for="email">Email*</label>
-        <input type="text"
+        <input type="email"
                class="input"
                v-model="formData.email"
                id="email"
                name="email" />
       </div>
+
       <div class="phone contact-container">
         <label class="label"
                for="phone">Phone</label>
-        <input type="text"
+        <input type="tel"
                class="input"
                v-model="formData.phone"
                id="phone"
                name="phone" />
       </div>
-      <div class="description contact-container">
+
+      <div class="message contact-container">
         <label class="label"
-               for="description">Message*</label>
-        <textarea id="description"
+               for="message">Message*</label>
+        <textarea id="message"
                   class="input"
-                  v-model="formData.description"
-                  name="description"
+                  v-model="formData.message"
+                  name="message"
                   resize="none"
                   rows="5"/>
       </div>
+
       <div class="submit contact-container">
         <custom-button
-          :isEnabled="isValidField(formData.name) && isValidField(formData.email) && isValidField(formData.phone) && isValidField(formData.description)"
+          :isEnabled="canSubmit"
           message="Send"
           @click="submit"/>
       </div>
+
     </form>
 
     <div
       v-if="isLoading"
       class="loading"/>
+
+    <div
+      v-if="successfullySubmit">Thank you for your message. Aileen will be in touch with you shortly.</div>
   </section>
 </template>
 
@@ -60,7 +70,7 @@ import Logo from '~/components/Logo.vue'
 import Navigation from '~/components/Navigation.vue'
 import axios from '~/node_modules/axios'
 import CustomButton from '~/components/elements/CustomButton.vue'
-import TextInput from '~/components/elements/TextInput.vue'
+import CustomInput from '~/components/elements/CustomInput.vue'
 
 export default {
   name: 'Contact',
@@ -68,7 +78,7 @@ export default {
     Logo,
     Navigation,
     CustomButton,
-    TextInput
+    CustomInput
   },
   props: [],
   data() {
@@ -76,16 +86,26 @@ export default {
       successfullySubmit: false,
       isLoading: false,
       formData: {
-        name: null,
-        email: null,
-        phone: null,
-        description: null
+        name: '',
+        email: '',
+        phone: '',
+        message: ''
       }
     }
   },
   methods: {
-    isValidField(field) {
-      return field && field.length > 0
+    nameIsValid() {
+      return this.formData.name.length > 0 && this.formData.name.length < 100
+    },
+    emailIsValid() {
+      let emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return emailRegex.test(this.formData.email);
+    },
+    phoneIsValid() {
+      return this.formData.phone.length > 0 ? false : true
+    },
+    messageIsValid() {
+      return this.formData.message.length > 0 && this.formData.message.length < 500
     },
     submit() {
       this.isLoading = true
@@ -99,6 +119,11 @@ export default {
           this.isLoading = false
           console.log(JSON.stringify(error))
         });
+    }
+  },
+  computed: {
+    canSubmit: function() {
+      return this.nameIsValid() && this.emailIsValid() && this.messageIsValid()
     }
   }
 }
@@ -136,7 +161,7 @@ export default {
         margin: 10px 0 5px;
       }
 
-      &.description {
+      &.message {
         .input {
           resize: none;
         }
