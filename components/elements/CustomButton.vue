@@ -24,8 +24,8 @@ export default {
     background-color: transparent;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 20px;
-    padding: 10px;
+    font-size: 14px;
+    padding: 5px;
     width: 100px;
   }
 </style>

@@ -35,13 +35,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  @import "../utils/style/_master.scss";
-
-  @font-face {
-    font-family: Znikomit;
-    src: url('../fonts/Znikomit.otf');
-  }
-
   .links-container {
     @media (max-width: 767px) {
       order: -1;
@@ -101,7 +94,6 @@ export default {
       .link-item {
         a {
           color: $primary;
-          font-family: courier;
           font-family: Znikomit;
           font-weight: bold;
           font-size: 30px;

@@ -34,23 +34,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-  @font-face {
-    font-family: Rofi;
-    src: url('../fonts/RofiTaste.otf');
-  }
-
-  @font-face {
-    font-family: Prida;
-    src: url('../fonts/Prida02Calt.otf');
-  }
-
-  @font-face {
-    font-family: Dandelon;
-    src: url('../fonts/Dandele¢n.otf');
-  }
-
-  $primary: #7e3f9e;
-
   .service-container {
     display: inline-block;
 
@@ -61,8 +44,6 @@ export default {
       text-decoration: none;
       text-transform: uppercase;
       font-size: 40px;
-      font-family: Prida;
-      font-family: Rofi;
       font-family: Dandelon;
       letter-spacing: 5px;
 
@@ -91,15 +72,15 @@ export default {
         padding: 0;
 
         &.image-0 {
-          background-image: url('../assets/wedding.jpg');
+          background-image: url('~/assets/wedding.jpg');
         }
 
         &.image-1 {
-          background-image: url('../assets/baby.jpg');
+          background-image: url('~/assets/baby.jpg');
         }
 
         &.image-2 {
-          background-image: url('../assets/vows.jpg');
+          background-image: url('~/assets/vows.jpg');
         }
       }
 

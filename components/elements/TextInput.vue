@@ -29,7 +29,7 @@ export default {
       type: Number,
       default: 5
     },
-    regexCheck: {
+    validationType: {
       type: String,
       required: false
     }
@@ -49,7 +49,7 @@ export default {
       return this.propValue.length >= this.minLength && this.propValue.length <= this.maxLength
     },
     satisfiesRegex() {
-      return this.regexCheck ? false : true
+      return this.validationRegex ? false : true
     }
   }
 }

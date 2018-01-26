@@ -6,7 +6,7 @@
       <h1 class="contact-intro">Your perfect day is just a click away. Fill out the form below and Aileen will be in touch shortly.</h1>
       <div class="name contact-container">
         <label class="label"
-               for="name">Name:</label>
+               for="name">Name*</label>
         <input type="text"
                class="input"
                v-model="formData.name"
@@ -15,7 +15,7 @@
       </div>
       <div class="email contact-container">
         <label class="label"
-               for="email">Email:</label>
+               for="email">Email*</label>
         <input type="text"
                class="input"
                v-model="formData.email"
@@ -24,7 +24,7 @@
       </div>
       <div class="phone contact-container">
         <label class="label"
-               for="phone">Phone:</label>
+               for="phone">Phone</label>
         <input type="text"
                class="input"
                v-model="formData.phone"
@@ -33,7 +33,7 @@
       </div>
       <div class="description contact-container">
         <label class="label"
-               for="description">Message:</label>
+               for="description">Message*</label>
         <textarea id="description"
                   class="input"
                   v-model="formData.description"
@@ -110,25 +110,30 @@ export default {
   position: relative;
 
   .contact-intro {
+    color: $primary;
+    font-family: sans-serif;
     text-align: center;
-    font-style: italic;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: normal;
     margin: 30px;
   }
   .contact-form {
-    margin: auto;
+    margin: 150px auto 50px;
     width: 400px;
     max-width: calc(100% - 30px);
 
     .contact-container {
       .label,
       .input {
+        display: block;
         width: 100%;
       }
 
       .label {
-        margin-bottom: 5px;
+        color: $primary;
+        font-family: sans-serif;
+        font-size: 14px;
+        margin: 10px 0 5px;
       }
 
       &.description {
@@ -138,9 +143,8 @@ export default {
       }
 
       &.submit {
+        margin-top: 20px;
         text-align: center;
-
-
       }
     }
   }
