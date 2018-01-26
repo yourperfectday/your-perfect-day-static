@@ -10,12 +10,14 @@
 import Logo from '~/components/Logo.vue'
 import Navigation from '~/components/Navigation.vue'
 import Home from '~/components/Home.vue'
+import ContactWidget from '~/components/ContactWidget.vue'
 
 export default {
   components: {
     Logo,
     Navigation,
-    Home
+    Home,
+    ContactWidget
   }
 }
 </script>

@@ -21,7 +21,8 @@ export default {
       isNavActive: false,
       links: [
         { name: 'About Aileen', link: '/aileen' },
-        { name: 'About The IIOC', link: '/iioc' }
+        { name: 'About The IIOC', link: '/iioc' },
+        { name: 'Contact', link: '/contact' }
       ]
     }
   },
