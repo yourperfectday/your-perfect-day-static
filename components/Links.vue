@@ -35,6 +35,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  @import "../assets/constants.scss";
+
   .links-container {
     @media (max-width: 767px) {
       order: -1;

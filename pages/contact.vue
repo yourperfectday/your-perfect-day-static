@@ -130,6 +130,8 @@ export default {
 </script>
 
 <style lang="scss">
+  @import "../assets/constants.scss";
+
 .container {
   margin-top: 100px;
   position: relative;
@@ -150,8 +152,14 @@ export default {
     .contact-container {
       .label,
       .input {
+        font-size: 12px;
         display: block;
         width: 100%;
+      }
+
+      .input {
+        border: 1px solid $primary;
+        padding: 4px;
       }
 
       .label {
@@ -170,6 +178,10 @@ export default {
       &.submit {
         margin-top: 20px;
         text-align: center;
+
+        button: {
+          border: 1px solid $primary;
+        }
       }
     }
   }

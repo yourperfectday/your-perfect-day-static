@@ -30,6 +30,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  @import "../assets/constants.scss";
+
   .social-media {
     list-style: none;
     margin: 0;

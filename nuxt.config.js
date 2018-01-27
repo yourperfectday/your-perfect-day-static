@@ -35,12 +35,6 @@ module.exports = {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
-
-        config.module.rules.forEach((rule) => {
-          if (rule.test.toString() === '/\\.vue$/') {
-            rule.options.loaders.scss[2].options.data = '@import "./assets/constants";'
-          }
-        })
       }
     }
   }
