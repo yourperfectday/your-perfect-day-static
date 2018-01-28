@@ -26,6 +26,6 @@ export default {
     cursor: pointer;
     font-size: 14px;
     padding: 5px;
-    width: 100px;
+    width: 150px;
   }
 </style>

@@ -24,7 +24,6 @@ export default {
 
 <style>
 .container {
-  background: url('~/assets/default.jpeg') center no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

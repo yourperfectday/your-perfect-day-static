@@ -4,7 +4,8 @@
     <navigation/>
 
     <form v-if="!successfullySubmit" id="contact-form" class="contact-form">
-      <h1 class="contact-intro">Your perfect day is just a click away.<br>Fill out the form below and Aileen will be in touch shortly.</h1>
+      <h1 class="contact-intro">Thank you for getting in touch!<br>We endeavour to respond to all queries within 24 hours. We look
+        forward to giving you your perfect day!</h1>
 
       <div class="name contact-container">
         <label class="label"
@@ -50,18 +51,19 @@
       <div class="submit contact-container">
         <custom-button
           :isEnabled="canSubmit"
-          message="Send"
+          message="Send Message"
           @click="submit"/>
       </div>
+
+      <div
+        v-if="isLoading"
+        class="loading"/>
 
     </form>
 
     <div
-      v-if="isLoading"
-      class="loading"/>
+      v-if="successfullySubmit">Your message has been sent. We will be in touch soon!</div>
 
-    <div
-      v-if="successfullySubmit">Thank you for your message. Aileen will be in touch with you shortly.</div>
   </section>
 </template>
 
@@ -142,12 +144,17 @@ export default {
     text-align: center;
     font-size: 18px;
     font-weight: normal;
-    margin: 30px;
+    margin-bottom: 30px;
   }
   .contact-form {
     margin: 150px auto 50px;
     width: 400px;
     max-width: calc(100% - 30px);
+    background: rgba(255,255,255,0.6);
+    box-shadow: 0 0 1em 0.5em rgba(255,255,255,0.6);
+    padding: 30px;
+    position: relative;
+    border-radius: 15px;
 
     .contact-container {
       .label,
@@ -184,15 +191,15 @@ export default {
         }
       }
     }
-  }
 
-  .loading {
-    background: url('~/assets/loading.svg') no-repeat center;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  };
+    .loading {
+      background: rgba(255, 255, 255, 0.6) url('~/assets/loading.svg') no-repeat center;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
 }
 </style>
