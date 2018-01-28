@@ -1,5 +1,5 @@
 <template>
-  <div class="logo"></div>
+  <a class="logo" href="/" />
 </template>
 
 <script>
