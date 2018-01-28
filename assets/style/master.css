@@ -1,26 +1,26 @@
 @font-face {
   font-family: Rofi;
-  src: url('~/assets/fonts/RofiTaste.otf');
+  src: url('~/assets/style/fonts/RofiTaste.otf');
 }
 
 @font-face {
   font-family: Prida;
-  src: url('~/assets/fonts/Prida02Calt.otf');
+  src: url('~/assets/style/fonts/Prida02Calt.otf');
 }
 
 @font-face {
   font-family: Dandelon;
-  src: url('~/assets/fonts/Dandeleon.otf');
+  src: url('~/assets/style/fonts/Dandeleon.otf');
 }
 
 @font-face {
   font-family: Znikomit;
-  src: url('~/assets/fonts/Znikomit.otf');
+  src: url('~/assets/style/fonts/Znikomit.otf');
 }
 
 body {
   /*background: url('~/assets/default.jpeg') center no-repeat;*/
-  background: url('~/assets/default.jpeg');
+  background: url('~/assets/images/default.jpg');
   background-position: center center;
   background-size: cover;
   height: 100vh;

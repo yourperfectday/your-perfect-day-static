@@ -72,15 +72,13 @@ import Logo from '~/components/Logo.vue'
 import Navigation from '~/components/Navigation.vue'
 import axios from '~/node_modules/axios'
 import CustomButton from '~/components/elements/CustomButton.vue'
-import CustomInput from '~/components/elements/CustomInput.vue'
 
 export default {
   name: 'Contact',
   components: {
     Logo,
     Navigation,
-    CustomButton,
-    CustomInput
+    CustomButton
   },
   props: [],
   data() {
@@ -132,7 +130,7 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "../assets/constants.scss";
+  @import "../assets/style/constants";
 
 .container {
   margin-top: 100px;

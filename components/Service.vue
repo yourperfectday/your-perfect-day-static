@@ -34,7 +34,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-  @import "../assets/constants.scss";
+  @import "../assets/style/constants";
 
   .service-container {
     display: inline-block;
@@ -74,15 +74,15 @@ export default {
         padding: 0;
 
         &.image-0 {
-          background-image: url('~/assets/wedding.jpg');
+          background-image: url('~/assets/images/wedding.jpg');
         }
 
         &.image-1 {
-          background-image: url('~/assets/baby.jpg');
+          background-image: url('~/assets/images/baby.jpg');
         }
 
         &.image-2 {
-          background-image: url('~/assets/vows.jpg');
+          background-image: url('~/assets/images/vows.jpg');
         }
       }
 
