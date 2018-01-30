@@ -33,6 +33,7 @@ export default {
     display: flex;
     flex-flow: row-reverse;
     height: 70px;
+    left: 0;
     top: 0;
     position: fixed;
     width: 100%;

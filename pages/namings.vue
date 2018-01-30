@@ -1,5 +1,5 @@
 <template>
-  <div class="information">
+  <section class="container namings">
     <logo/>
     <navigation/>
     <div class="namings">
@@ -19,7 +19,7 @@
         the baby. But Aileen can work with you to create the perfect fit for you and your new little one.
       </p>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

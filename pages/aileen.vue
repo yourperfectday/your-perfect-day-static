@@ -1,5 +1,5 @@
 <template>
-  <div class="information">
+  <section class="container aileen">
     <logo/>
     <navigation/>
     <div class="aileen">
@@ -16,7 +16,7 @@
         I look forward to giving you your perfect day.
       </p>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

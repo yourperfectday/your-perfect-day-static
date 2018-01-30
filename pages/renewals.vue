@@ -1,5 +1,5 @@
 <template>
-  <div class="information">
+  <section class="container renewals">
     <logo/>
     <navigation/>
     <div class="renewals">
@@ -25,7 +25,7 @@
         couple. Aileen will work with you both to create your a ceremony that fits you both perfectly.
       </p>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

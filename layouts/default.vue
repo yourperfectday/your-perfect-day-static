@@ -1,5 +1,5 @@
 <template>
-  <div class="aisling-layout">
+  <div>
     <nuxt/>
   </div>
 </template>

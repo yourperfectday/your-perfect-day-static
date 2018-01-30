@@ -133,8 +133,12 @@ export default {
   @import "../assets/style/constants";
 
 .container {
-  margin-top: 100px;
+  /*margin-top: 100px;*/
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 
   .contact-intro {
     color: $primary;
@@ -142,11 +146,11 @@ export default {
     text-align: center;
     font-size: 18px;
     font-weight: normal;
-    margin-bottom: 30px;
+    /*margin-bottom: 30px;*/
   }
   .contact-form {
-    margin: 150px auto 50px;
-    width: 400px;
+    /*margin: 150px auto 50px;*/
+    width: 300px;
     max-width: calc(100% - 30px);
     background: rgba(255,255,255,0.6);
     box-shadow: 0 0 1em 0.5em rgba(255,255,255,0.6);

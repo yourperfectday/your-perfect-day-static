@@ -1,5 +1,5 @@
 <template>
-  <div class="information">
+  <section class="container weddings">
     <logo/>
     <navigation/>
     <div class="weddings">
@@ -19,7 +19,7 @@
         Aileen will work with you both to create your perfect ceremony that fulfils your wishes.
       </p>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
