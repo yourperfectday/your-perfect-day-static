@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <navigation isHomepage="false"/>
+    <navigation :isHomepage="isHomepage"/>
     <home/>
   </section>
 </template>
@@ -15,6 +15,11 @@ export default {
     Navigation,
     Home,
     ContactWidget
+  },
+  data() {
+    return {
+      isHomepage: true
+    }
   }
 }
 </script>
