@@ -96,7 +96,7 @@ export default {
       .link-item {
         a {
           color: $primary;
-          font-family: Znikomit;
+          font-family: Segan;
           font-weight: bold;
           font-size: 30px;
           text-decoration: none;
