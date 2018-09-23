@@ -46,7 +46,7 @@ export default {
       text-decoration: none;
       text-transform: uppercase;
       font-size: 40px;
-      font-family: Dandelon;
+      font-family: Maima;
       letter-spacing: 5px;
 
       a {
@@ -74,11 +74,11 @@ export default {
         padding: 0;
 
         &.image-0 {
-          background-image: url('~/assets/images/wedding.jpg');
+          background-image: url('~/assets/images/baby.jpg');
         }
 
         &.image-1 {
-          background-image: url('~/assets/images/baby.jpg');
+          background-image: url('~/assets/images/wedding.jpg');
         }
 
         &.image-2 {
