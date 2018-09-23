@@ -141,6 +141,7 @@ export default {
           display: inline-block;
           font-size: 24px;
           margin: 10px auto;
+          line-height: 40px;
         }
       }
     }
