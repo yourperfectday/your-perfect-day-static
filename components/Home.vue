@@ -24,8 +24,8 @@
     data () {
       return {
         services: [
-          { name: 'Weddings', path: '/weddings', image: 'assets/wedding.jpg' },
           { name: 'Namings', path: '/namings', image: 'assets/baby.jpg' },
+          { name: 'Weddings', path: '/weddings', image: 'assets/wedding.jpg' },
           { name: 'Renewals', path: '/renewals', image: 'assets/vows.jpg' }
         ]
       }
