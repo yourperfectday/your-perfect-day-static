@@ -103,7 +103,8 @@ export default {
           transition: color 0.1s linear;
 
           @media (min-width: 768px) {
-            font-size: 14px;
+            font-size: 16px;
+            line-height: 24px;
           }
 
           &:hover {
