@@ -39,6 +39,10 @@ export default {
   .service-container {
     display: inline-block;
 
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
+
     .service {
       display: flex;
       margin: 0;
@@ -48,6 +52,11 @@ export default {
       font-size: 40px;
       font-family: Maima;
       letter-spacing: 5px;
+      text-align: center;
+
+      @media (max-width: 480px) {
+        font-size: 32px;
+      }
 
       a {
         color: $primary;
@@ -56,6 +65,7 @@ export default {
         position: relative;
         text-decoration: none;
         z-index: 10;
+        width: 100%;
       }
 
       .service-image {
