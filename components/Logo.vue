@@ -14,10 +14,10 @@ export default {
     left: 0;
     top: 0;
     z-index: 20;
-    background: url('~/assets/logo.png') no-repeat center;
-    background-size: contain;
+    background: url('~/assets/logo.png') 0;
+    background-size: 100%;
     height: 100px;
-    width: 100px;
+    width: 200px;
     margin: 0 10px;
   }
 </style>
