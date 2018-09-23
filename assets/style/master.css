@@ -18,6 +18,16 @@
   src: url('~/assets/style/fonts/Znikomit.otf');
 }
 
+@font-face {
+  font-family: Maima;
+  src: url('~/assets/style/fonts/miama.otf');
+}
+
+@font-face {
+  font-family: Segan;
+  src: url('~/assets/style/fonts/Segan-Light.ttf');
+}
+
 body {
   background: url('~/assets/images/default.jpg') center center;
   background-size: cover;
