@@ -75,14 +75,26 @@ export default {
 
         &.image-0 {
           background-image: url('~/assets/images/baby.jpg');
+
+          @media screen and (orientation:portrait) {
+            background-image: url('~/assets/images/mobile/baby.jpg');
+          }
         }
 
         &.image-1 {
           background-image: url('~/assets/images/wedding.jpg');
+
+          @media screen and (orientation:portrait) {
+            background-image: url('~/assets/images/mobile/wedding.jpg');
+          }
         }
 
         &.image-2 {
           background-image: url('~/assets/images/vows.jpg');
+
+          @media screen and (orientation:portrait) {
+            background-image: url('~/assets/images/mobile/vows.jpg');
+          }
         }
       }
 

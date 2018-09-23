@@ -1,9 +1,7 @@
 <template>
-  <section class="container weddings">
-    <logo/>
-    <navigation/>
-    <div class="weddings">
-      <h1>Weddings</h1>
+  <Content
+    heading="Wedding Ceremonies"
+    pageName="weddings">
       <p>
         Your love is like no other so your ceremony shouldn’t be like any other.
       </p>
@@ -18,23 +16,16 @@
         candle lighting), readings and your pronouncement but can easily be changed to suit each couple.
         Aileen will work with you both to create your perfect ceremony that fulfils your wishes.
       </p>
-    </div>
-  </section>
+  </Content>
 </template>
 
 <script>
-  import Logo from '~/components/Logo.vue'
-  import Navigation from '~/components/Navigation.vue'
+  import Content from '~/components/Content.vue'
 
   export default {
-    name: 'Aileen',
+    name: 'Weddings',
     components: {
-      Logo,
-      Navigation
+      Content
     }
   }
 </script>
-
-<style>
-
-</style>
