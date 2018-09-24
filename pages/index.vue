@@ -11,6 +11,7 @@ import Home from '~/components/Home.vue'
 import ContactWidget from '~/components/ContactWidget.vue'
 
 export default {
+  name: 'Index',
   components: {
     Navigation,
     Home,
@@ -18,7 +19,7 @@ export default {
   },
   data() {
     return {
-      isHomepage: true
+      isHomepage: false
     }
   }
 }
