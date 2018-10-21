@@ -50,7 +50,7 @@ export default {
       text-decoration: none;
       text-transform: uppercase;
       font-size: 40px;
-      font-family: Maima;
+      font-family: Segan;
       letter-spacing: 5px;
       text-align: center;
 

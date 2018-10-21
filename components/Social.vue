@@ -40,10 +40,16 @@ export default {
       cursor: pointer;
       display: inline-block;
 
+      @media (min-width: 768px) {
+        &:last-child {
+          margin-right: 15px;
+        }
+      }
+
       .social-media-link {
         .social-icon {
-          height: 25px;
-          width: 25px;
+          height: 20px;
+          width: 20px;
           margin: 0 5px;
           fill: $primary;
           transition: fill 0.1s linear;
