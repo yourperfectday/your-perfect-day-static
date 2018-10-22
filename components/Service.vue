@@ -50,7 +50,7 @@ export default {
       text-decoration: none;
       text-transform: uppercase;
       font-size: 40px;
-      font-family: Maima;
+      font-family: Segan;
       letter-spacing: 5px;
       text-align: center;
 
@@ -66,6 +66,7 @@ export default {
         text-decoration: none;
         z-index: 10;
         width: 100%;
+        letter-spacing: 10px;
       }
 
       .service-image {
@@ -84,18 +85,18 @@ export default {
         padding: 0;
 
         &.image-0 {
-          background-image: url('~/assets/images/baby.jpg');
-
-          @media screen and (orientation:portrait) {
-            background-image: url('~/assets/images/mobile/baby.jpg');
-          }
-        }
-
-        &.image-1 {
           background-image: url('~/assets/images/wedding.jpg');
 
           @media screen and (orientation:portrait) {
             background-image: url('~/assets/images/mobile/wedding.jpg');
+          }
+        }
+
+        &.image-1 {
+          background-image: url('~/assets/images/baby.jpg');
+
+          @media screen and (orientation:portrait) {
+            background-image: url('~/assets/images/mobile/baby.jpg');
           }
         }
 

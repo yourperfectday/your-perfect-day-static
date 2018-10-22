@@ -1,6 +1,5 @@
 <template>
   <section class="container">
-    <logo/>
     <navigation/>
 
     <form v-if="!successfullySubmit" id="contact-form" class="contact-form">
@@ -133,48 +132,48 @@ export default {
   @import "../assets/style/constants";
 
 .container {
-  /*margin-top: 100px;*/
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-
   .contact-intro {
     color: $primary;
-    font-family: sans-serif;
+    font-family: Segan;
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 1.3;
     font-weight: normal;
-    /*margin-bottom: 30px;*/
+    margin-bottom: 40px;
   }
   .contact-form {
-    /*margin: 150px auto 50px;*/
-    width: 300px;
-    max-width: calc(100% - 30px);
-    background: rgba(255,255,255,0.6);
-    box-shadow: 0 0 1em 0.5em rgba(255,255,255,0.6);
+    box-sizing: border-box;
+    max-width: 480px;
+    width: 100%;
     padding: 30px;
-    position: relative;
-    border-radius: 15px;
+    margin-top: 70px;
+    /*position: absolute;*/
+    /*top: 0;*/
 
     .contact-container {
+      .label, .input, button {
+        width: 100%;
+        display: block;
+      }
+
       .label,
       .input {
-        font-size: 12px;
-        display: block;
-        width: 100%;
+        font-size: 14px;
+      }
+
+      input, button {
+        height: 40px;
       }
 
       .input {
+        box-sizing: border-box;
         border: 1px solid $primary;
-        padding: 4px;
+        padding: 7px;
       }
 
       .label {
         color: $primary;
         font-family: sans-serif;
-        font-size: 14px;
         margin: 10px 0 5px;
       }
 
@@ -186,11 +185,6 @@ export default {
 
       &.submit {
         margin-top: 20px;
-        text-align: center;
-
-        button: {
-          border: 1px solid $primary;
-        }
       }
     }
 

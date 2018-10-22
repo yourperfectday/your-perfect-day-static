@@ -21,11 +21,14 @@ export default {
 
 <style lang="scss">
   .button {
-    background-color: transparent;
-    border-radius: 5px;
-    cursor: pointer;
+    background-color: white;
+    border-radius: 3px;
     font-size: 14px;
     padding: 5px;
-    width: 150px;
+    border-color: black;
+
+    &:disabled {
+      //TODO: something here!
+    }
   }
 </style>

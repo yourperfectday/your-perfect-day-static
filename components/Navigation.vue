@@ -28,7 +28,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
+  @import "../assets/style/constants";
+
   .navigation {
+    background-color: rgba(255,255,255,1);
+    border-bottom: 1px solid lightgray;
     align-items: center;
     display: flex;
     flex-flow: row-reverse;
@@ -38,6 +42,8 @@ export default {
     position: fixed;
     width: 100%;
     z-index: 20;
+
+
   }
 </style>
 

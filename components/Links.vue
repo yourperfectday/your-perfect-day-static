@@ -1,9 +1,7 @@
 <template>
-  <div class="links-container" :class="{ active: isNavActive }">
-    <div class="links-hamburger" @click="toggleNav">
-      <span class="top"></span>
-      <span class="mid"></span>
-      <span class="bottom"></span>
+  <div class="links-container" :class="{ active: isNavActive }" @click="toggleNav">
+    <div class="hamburger-container" >
+      <div class="hamburger"/>
     </div>
     <ul class="links">
       <li v-for="(link, index) in links" :key="index" class="link-item">
@@ -38,60 +36,67 @@ export default {
   @import "../assets/style/constants";
 
   .links-container {
+    height: 20px;
+
     @media (max-width: 767px) {
       order: -1;
     }
 
-    .links-hamburger {
+    .hamburger-container {
       cursor: pointer;
-      display: none;
-      margin: 0 10px;
-      width: 30px;
-      height: 30px;
       position: relative;
+      width: 20px;
+      height: 100%;
+      display: none;
       z-index: 50;
+      margin: 0 10px;
 
-      &:hover {
-        span {
-          background: $secondary;
+      @media (max-width: 767px) {
+        display: inline-block;
+      }
+
+      .hamburger {
+        top: 50%;
+        display: block;
+        margin-top: -2px;
+
+        &,
+        &:before,
+        &:after {
+          left: 0;
+          position: absolute;
+          width: 20px;
+          height: 3px;
+          transition-timing-function: ease;
+          transition-duration: .15s;
+          transition-property: transform;
+          border-radius: 4px;
+          background-color: $primary;
+        }
+
+        &:before,
+        &:after {
+          content: '';
+          display: block;
+        }
+
+        &:before {
+          top: -8px;
+        }
+
+        &:after {
+          bottom: -8px;
         }
       }
 
-      span {
-        display: block;
-        position: absolute;
-        height: 4.5px;
-        width: 100%;
-        background: $primary;
-        border-radius: 4.5px;
-        opacity: 1;
-        left: 0;
-        transform: rotate(0deg);
-        transition: .25s ease-in-out;
-      }
+      &.active {
 
-      .top {
-        top: 0px;
-        transform-origin: left center;
-      }
-
-      .mid {
-        top: 9px;
-        transform-origin: left center;
-      }
-
-      .bottom {
-        top: 19px;
-        transform-origin: left center;
-      }
-
-      @media (max-width: 767px) {
-        display: block;
       }
     }
 
     .links {
       list-style: none;
+      margin: 0;
 
       .link-item {
         a {
@@ -100,11 +105,14 @@ export default {
           font-weight: bold;
           font-size: 30px;
           text-decoration: none;
+          text-transform: uppercase;
+          letter-spacing: 2px;
           transition: color 0.1s linear;
 
           @media (min-width: 768px) {
-            font-size: 16px;
+            font-size: 14px;
             line-height: 24px;
+            letter-spacing: 1px;
           }
 
           &:hover {
@@ -134,7 +142,7 @@ export default {
         left: 0;
         padding: 0;
         margin: 0;
-        background-color: rgba(255, 255, 255, 0.9);
+        background-color: rgba(255, 255, 255, 1);
         transition: all 0.1s ease-in;
 
         .link-item {
@@ -142,6 +150,18 @@ export default {
           font-size: 24px;
           margin: 10px auto;
           line-height: 40px;
+        }
+      }
+    }
+
+    &:hover {
+      .hamburger-container {
+        .hamburger {
+          &,
+          &:before,
+          &:after {
+            background-color: $secondary;
+          }
         }
       }
     }
@@ -154,22 +174,17 @@ export default {
         }
       }
 
-      .links-hamburger {
-        .top {
-          transform: rotate(45deg);
-          top: -1.5px;
-          left: 4px;
-        }
+      .hamburger {
+        transform: rotate(765deg);
 
-        .mid {
-          width: 0;
+        &:before {
+          top: 0;
           opacity: 0;
         }
 
-        .bottom {
-          transform: rotate(-45deg);
-          top: 19.5px;
-          left: 4px;
+        &:after {
+          bottom: 0;
+          transform: rotate(90deg);
         }
       }
     }
