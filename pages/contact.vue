@@ -132,12 +132,6 @@ export default {
   @import "../assets/style/constants";
 
 .container {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  overflow: scroll;
-  margin-top: 70px;
-
   .contact-intro {
     color: $primary;
     font-family: Segan;
@@ -152,8 +146,9 @@ export default {
     max-width: 480px;
     width: 100%;
     padding: 30px;
-    position: absolute;
-    top: 0;
+    margin-top: 70px;
+    /*position: absolute;*/
+    /*top: 0;*/
 
     .contact-container {
       .label, .input, button {

@@ -18,6 +18,7 @@ export default {
     height: 70px;
     order: 3;
     flex-grow: 1;
+    margin-left: 10px;
   }
 
   .logo {

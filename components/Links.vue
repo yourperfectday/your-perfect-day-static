@@ -105,11 +105,14 @@ export default {
           font-weight: bold;
           font-size: 30px;
           text-decoration: none;
+          text-transform: uppercase;
+          letter-spacing: 2px;
           transition: color 0.1s linear;
 
           @media (min-width: 768px) {
             font-size: 14px;
             line-height: 24px;
+            letter-spacing: 1px;
           }
 
           &:hover {
@@ -139,7 +142,7 @@ export default {
         left: 0;
         padding: 0;
         margin: 0;
-        background-color: rgba(255, 255, 255, 0.9);
+        background-color: rgba(255, 255, 255, 1);
         transition: all 0.1s ease-in;
 
         .link-item {
