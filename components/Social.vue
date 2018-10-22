@@ -35,10 +35,12 @@ export default {
     list-style: none;
     margin: 0;
     padding: 0;  //svgs aren't in full viewport
+    height: 20px;
 
     .social-media-item {
       cursor: pointer;
       display: inline-block;
+      height: 20px;
 
       @media (min-width: 768px) {
         &:last-child {
@@ -47,6 +49,9 @@ export default {
       }
 
       .social-media-link {
+        display: inline-block;
+        height: 100%;
+
         .social-icon {
           height: 20px;
           width: 20px;

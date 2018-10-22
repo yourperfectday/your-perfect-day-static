@@ -29,7 +29,7 @@ export default {
 
 <style scoped lang="scss">
   .navigation {
-    background-color: white;
+    background-color: rgba(255,255,255,1);
     align-items: center;
     display: flex;
     flex-flow: row-reverse;
@@ -39,6 +39,8 @@ export default {
     position: fixed;
     width: 100%;
     z-index: 20;
+
+
   }
 </style>
 

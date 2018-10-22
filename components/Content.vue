@@ -1,6 +1,5 @@
 <template>
   <section class="content-container" :class="[pageName]">
-    <logo/>
     <navigation/>
     <div class="content-page">
       <h1 class="content-header">{{heading}}</h1>
@@ -44,16 +43,19 @@
 
 <style lang="scss" scoped>
   .content-page {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: white;
     position: fixed;
-    top: 80px;
+    top: 0;
     bottom: 40px;
-    width: calc(100% - 80px);
     left: 40px;
+    width: calc(100% - 80px);
+    padding-top: 80px;
     display: flex;
     font-family: Segan;
     align-items: center;
     flex-wrap: wrap;
+
+    overflow: scroll;
 
     .content-header {
       align-self: flex-start;

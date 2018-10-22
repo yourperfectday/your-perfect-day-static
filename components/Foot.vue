@@ -17,8 +17,8 @@
 
 <style scoped lang="scss">
   .footer {
-    background-color: white;
-    height: 70px;
+    background-color: rgba(255,255,255,0.9);
+    height: 100px;
     left: 0;
     bottom: 0;
     position: fixed;

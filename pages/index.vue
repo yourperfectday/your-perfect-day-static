@@ -30,6 +30,8 @@ export default {
 
 <style>
 .container {
+  background: url('~/assets/images/default.jpg') center center;
+  background-size: cover;
   text-align: center;
   width: 100vw;
   height: 100vh;

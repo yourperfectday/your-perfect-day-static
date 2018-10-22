@@ -1,7 +1,7 @@
 <template>
   <div class="testimonial">
     <div class="quote">{{quote}}</div>
-    <div class="names">{{name}}</div>
+    <div class="names" v-if="name">{{name}}</div>
   </div>
 </template>
 
@@ -14,8 +14,7 @@
         required: true
       },
       name: {
-        type: String,
-        required: true
+        type: String
       }
     }
   }
@@ -25,18 +24,22 @@
   .testimonial {
     .quote,
     .names {
-      font-size: 12px;
+      font-size: 15px;
       font-family: Segan;
-      margin: 5px 50px;
+      margin: 10px auto;
+      max-width: 750px;
     }
 
     .quote {
       font-style: italic;
-      line-height: 1.3;
+      line-height: 1.5;
 
-      &:after,
       &:before {
-        content: '"';
+        content: '“';
+      }
+
+      &:after {
+        content: '”'
       }
     }
 

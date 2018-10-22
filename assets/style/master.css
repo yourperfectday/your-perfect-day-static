@@ -29,8 +29,9 @@
 }
 
 body {
-  background: url('~/assets/images/default.jpg') center center;
-  background-size: cover;
+
+  background-color: rgb(245, 245, 245);
+  background-color: white;
   display: flex;
   justify-content: center;
   height: 100vh;
