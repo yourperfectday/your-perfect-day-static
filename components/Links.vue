@@ -5,7 +5,7 @@
     </div>
     <ul class="links">
       <li v-for="(link, index) in links" :key="index" class="link-item">
-        <a :href="link.link">{{ link.name }}</a>
+        <a :href="link.link" :target="link.target || null">{{ link.name }}</a>
       </li>
     </ul>
   </div>
@@ -19,7 +19,7 @@ export default {
       isNavActive: false,
       links: [
         { name: 'About Aileen', link: '/aileen' },
-        { name: 'About The IIOC', link: 'https://www.iioc.ie/' },
+        { name: 'About The IIOC', link: 'https://www.iioc.ie/', target: '_blank' },
         { name: 'Contact', link: '/contact' }
       ]
     }
