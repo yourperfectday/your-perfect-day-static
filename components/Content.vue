@@ -51,11 +51,6 @@
     @media (max-width: 480px) {
       padding: 20px;
     }
-    /*display: flex;*/
-    /*font-family: Segan;*/
-    /*align-items: center;*/
-    /*flex-wrap: wrap;*/
-    /*overflow: scroll;*/
 
     .content-header {
       text-transform: uppercase;
@@ -69,6 +64,10 @@
         font-size: 22px;
         letter-spacing: 2px;
         margin-bottom: 15px;
+      }
+
+      @media (min-width: 768px) {
+        margin-left: 330px;
       }
     }
 
