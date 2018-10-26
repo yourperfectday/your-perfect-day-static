@@ -22,7 +22,7 @@ export default {
   }
 
   .logo {
-    background: url('~/assets/logo.png') 0 center;
+    background: url('~/assets/logo.jpg') 0 center;
     background-size: 100%;
     height: 100%;
     width: 140px;
