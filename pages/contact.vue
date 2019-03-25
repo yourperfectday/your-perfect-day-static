@@ -187,13 +187,6 @@ export default {
         margin-top: 20px;
       }
     }
-    
-    .thank-you-message {
-      display: flex;
-      flex-flow: column;
-      justify-content: center;
-      height: 100vh;
-    }
 
     .loading {
       background: rgba(255, 255, 255, 0.6) url('~/assets/loading.svg') no-repeat center;
@@ -203,6 +196,13 @@ export default {
       top: 0;
       width: 100%;
     }
+  }
+  
+  .thank-you-message {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: 100vh;
   }
 }
 </style>
