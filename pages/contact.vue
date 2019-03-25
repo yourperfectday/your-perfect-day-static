@@ -60,7 +60,7 @@
 
     </form>
 
-    <div
+    <div class="thank-you-message"
       v-if="successfullySubmit">Your message has been sent. We will be in touch soon!</div>
 
   </section>
@@ -186,6 +186,13 @@ export default {
       &.submit {
         margin-top: 20px;
       }
+    }
+    
+    .thank-you-message {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      height: 100vh;
     }
 
     .loading {
